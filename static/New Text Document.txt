@@ -1,0 +1,32 @@
+model.py
+
+class CustomerDetail(models.Model):
+    name=models.CharField(max_length=200)
+    address=models.CharField(max_length=200)
+    phone=models.IntegerField()
+    email=models.EmailField(max_length=100)
+    city=models.CharField(max_length=50)
+    state=models.CharField(max_length=50)
+    choice = (
+        ("pizza", "pizza"),
+        ("burger","burger"),
+        ("hotdog","hotdog"),
+        ("muffins","muffins"),
+        )
+    food = models.CharField(blank=False, choices=choice, max_length=10,default="muffins")
+
+views.py
+
+def order(request):
+    if request.method == "POST":
+        name=request.POST.get("name")
+        phone=request.POST.get('phone')
+        email=request.POST.get("email")
+        address=request.POST.get("address")
+        city=request.POST.get("city")
+        state=request.POST.get('state')
+        food=request.POST.get("food")
+        con=CustomerDetail(name=name,phone=phone,email=email,address=address,city=city,state=state,food=food)
+        con.save()
+      
+    return render(request,'order.html')

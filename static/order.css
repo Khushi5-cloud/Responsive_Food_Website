@@ -1,0 +1,116 @@
+
+.center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2cm;
+    width: 2cm;
+    padding-top: 25px;
+}
+
+h1{
+    
+    text-align: center;
+    font-family: 'Crete Round', serif;
+
+}
+h3{
+    padding-top: 1cm;
+    text-align: center;
+    font-family: 'Crete Round', serif;
+}
+label{
+    font-family: 'Crete Round', serif;
+
+}
+
+#detail{
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+#detail-box{
+    margin-top: 1cm;
+    display: flex;
+    
+    justify-content: center;
+    text-align: left;
+}
+
+#detail-box form{
+    width: 40%;  
+}
+
+#detail-box input{
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(245, 247, 227);
+}
+#detail-box input:hover{
+    background-color: rgb(242, 243, 235);
+    
+}
+
+
+
+#meal-box{
+    
+    display: flex;
+    justify-content: center;
+    
+}
+#meal-box .box
+{
+    /* to make box around each section */
+    border:1px solid gray; 
+    margin-top: 1cm;
+    background-color: rgb(245, 247, 227);
+    padding-top: 1cm;
+    padding-left: 1cm;
+    display: block;
+    border-radius: 5px;
+    height: 6cm;
+    width: 7cm;
+}
+#meal-box .box:hover{
+    background-color: rgb(242, 243, 235);
+}
+
+#btn{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:2cm;
+}
+#b1{
+    width: 3cm;
+    height: 1cm;
+    background-color: rgb(243, 207, 88);
+    border-radius: 10px;
+    border: none;
+    
+}
+#b1:hover{
+    background-color: red;
+    
+}
+footer{
+    background: black;
+    color:white;
+    padding: 40px 80px;
+    text-align: center;
+}
+/* REmove the arrow/spinner from number input tag*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+
+

@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Bree+Serif&family=Crete+Round&family=Indie+Flower&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{% static 'order.css' %}">
+    <script src="{% static 'order.js' %}"></script>
+    
+</head>
+<body>
+    <a href="{%url 'home' %}"><i class="fa fa-arrow-left" style="font-size: 24px; padding:5px;color:black"></i></a>
+    
+    <!-- Code for displaying message when form is submitted -->
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}" role="alert">
+        {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    
+
+
+    <img src="{% static 'shopping-cart.png' %}" class="center">
+    <h1><b style="color:red;">O</b>rder <b style="color:rgb(247, 229, 71);">F</b>ood</h1>
+
+    <hr style="height:1px; border-width:1px; color:black; background-color:black; width:20cm;">
+
+    <section id="detail">
+        <h3>Delivery Details <i class="glyphicon glyphicon-list" style="color:rgb(247, 229, 71);"></i></h3>
+        <div id="detail-box">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="box"> 
+                    <label for="name">Full Name </label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    
+                </div>
+                <div class="box"> 
+                    <br>
+                    <label for="address">Address </label>
+                    <br>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                </div>
+                <div class="box">
+                    <br> 
+                    <label for="phone">Phone Number </label>
+                    <br>
+                    <input type="number" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="box"> 
+                    <br>
+                    <label for="email">Email </label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="box"> 
+                    <br>
+                    <label for="city">City </label>
+                    <br>
+                    <input type="text" id="city" placeholder="Enter your city" name="city" required>
+                </div>
+                <div class="box"> 
+                    <br>
+                    <label for="state">State </label>
+                    <br>
+                    <input type="text" id="state" placeholder="Enter your state" name="state" required>
+                </div>
+
+                <section id="meal">
+                    <h3>Meal Choices  <i class="glyphicon glyphicon-cutlery" style="color:red;padding:2px;"></i></h3> 
+                    <div id="meal-box">
+                        <div class="box">
+                            <label for="food">Food</label>
+                            <br>
+                            <select id="food" name="food" required>
+                                <option value="none" selected disabled>Select</option>
+                                <option value="pizza">Pizza</option>
+                                <option value="burger">Burger</option>
+                                <option value="hotdog">Hotdog</option>
+                                <option value="muffins">Muffins</option>
+                            </select>
+                            <br>
+                            <br>
+                            <label for="num">Quantity</label>
+                            <br>
+                            <input type="number" id="num" name="num" style="width: 40px; background-color:white; border: 1px solid black;" oninput="Amount()" required>
+                            <br>
+                            <br>
+                            Total Bill:
+                            <span id="ans"></span>
+                        </div> 
+                    </div>
+
+                    <div id="btn">
+                        <button id="b1">Submit</button>
+                       
+                    </div>
+        
+                </section>
+            </form>
+        </div>
+    </section>
+
+    
+
+    
+
+    <footer>
+        <div class="footer">
+            Copyright &copy; www.foodie.com. All rights reserved.
+
+        </div>
+    </footer>
+    
+</body>
+</html>

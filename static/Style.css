@@ -1,0 +1,281 @@
+body
+{
+padding: 0px;
+margin: 0px;
+background-color: rgb(245, 245, 233);
+}
+html
+{
+    scroll-behavior: smooth;
+}
+#header
+{
+    display: flex; /* all points of header came in hearder row*/
+    background-color: rgb(247, 229, 71);
+    /* Below Two lines will show that while scrolling through website the element will not disappear*/
+    position: sticky;
+    top: 0px;
+    
+}
+#webname img
+{
+    margin-top: 0px;
+    margin-left:1cm;
+}
+#header ul
+{
+    display: flex; /* put all points in single line*/
+    height: 1.8cm;  
+}
+#header ul li
+{
+    list-style: none;
+    margin-top: 0.7cm;
+    padding: 1px 9px;
+    height: 0.8cm;
+    width: 2.5cm;
+    background-color: rgb(247, 229, 71);
+    font-size: small;
+    border-radius: 4px;
+    text-align: center;
+}
+#header ul li:hover
+{
+    background-color: rgb(251, 253, 107);   
+}
+#header ul li a
+{
+    color: black; 
+    text-decoration: none; /* to remove the underline below the text when cursor came on each word*/
+    font-family: 'Bree Serif', serif;
+}
+
+#home 
+{
+    display:flex;  /*it has remove the gap between navbar and section*/ 
+    height: 13cm;
+    justify-content: center;
+    flex-direction: column;
+    color:rgb(247, 229, 71);
+    align-items:center;   
+}
+#home::before
+{
+    content: "";
+    position: absolute;
+    background: url(home.webp) no-repeat center center/cover; /* centre/cover was use to cover the whole image in screen*/
+    height: 13cm; /* same as section heigth in home id */
+    width: 100%;
+    z-index: -1; /* use when we write something on image it will dark it*/
+    opacity: 0.8; /* it is the tranparency level*/
+}
+.btn{
+    margin-top: 0.5cm;
+ /*   border: 2px solid red; */
+    border-radius: 6px;
+    color:black;
+    background-color:red;
+    font-family: 'Crete Round', serif;   
+    border:none;
+}
+.btn:hover
+{
+    border:2px solid rgb(247, 145, 49);
+    background-color:rgb(247, 145, 49);
+
+}
+#services
+{
+    background-color: rgb(246, 253, 205);
+    /* Below two lines are use to remove gap between two sections*/
+    display: flex;
+    flex-direction: column;
+}
+#services-box
+{
+    display: flex;
+    justify-content: center; /* Bring box in centre */
+    margin:25px;  
+}
+#services-box .box
+{
+    border: 2px solid brown;
+    border-radius: 15px;
+    display:block;
+    margin: 5px;
+    height: 8cm;
+    width: 13cm;
+    background-color: rgba(238, 236, 236, 0.925);  
+}
+#services-box .box:hover
+{
+    background-color: rgb(237, 247, 247);
+    border: 4px solid rgb(237, 247, 247) ;
+}
+#services-box .box img
+{
+    height: 3cm;
+    width: 3cm;
+    margin-top: 0.7cm;
+    /* to centre the image in box*/
+    margin-left: auto;
+    margin-right: auto;
+    display: block;   
+}
+
+
+#product
+{ 
+    /* Below two lines are use to remove gap between two sections*/
+    display: flex;
+    flex-direction: column;
+}
+
+#product-box
+{
+    margin:20px;
+    padding:10px;
+    display:flex; /* All boxes in one line */    
+}
+#product-box .box
+{
+    /* to make box around each section */
+    border:1px solid brown; 
+    margin: 30px;
+    display: block;
+    border-radius: 10px;
+    background-color: white;
+}
+#product-box .box:hover
+{
+    background-color: white;
+    border: 3px solid white;
+}
+
+#product-box .box img
+{ 
+    height: 5cm;
+    width: 7cm;
+    border-radius: 10px;
+}
+#product-box .box h3
+{
+    text-align: center;
+}
+#product-box .box p
+{  
+    text-align: center;
+}
+
+#clients 
+{
+    display:flex;  /*it has remove the gap between navbar and section*/ 
+    height: 8cm;
+    flex-direction: column;   
+}
+#clients::before
+{
+    content: "";
+    position: absolute;
+    background: url(clients.jpg) no-repeat center center/cover; /* centre/cover was use to cover the whole image in screen*/
+    height: 8cm; /* same as section heigth in home id */
+    width: 100%;
+    z-index: -1; /* use when we write something on image it will dark it*/
+    opacity: 0.4; /* it is the tranparency level*/
+}
+
+#items
+{
+    display:flex;
+    justify-content: center;
+}
+#items .client-items
+{
+    padding: 34px;
+}
+#items .client-items img
+{
+    height: 3cm;
+    width: 3cm;
+}
+
+#contact
+{   
+    height: 15cm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#contact::before
+{
+    content: "";
+    position: absolute;
+    background: url(contact.webp) no-repeat center center/cover; 
+    height: 15cm; 
+    width: 100%;
+    z-index: -1; 
+    opacity: 0.4; 
+}
+#contact-box
+{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#contact-box form
+{
+    width: 40%;  
+}
+
+#contact-box input,#contact-box textarea{
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 10px;
+    border: none;
+
+}
+#contact-box label{
+    font-family: 'Crete Round', serif; 
+}
+
+footer{
+    background: black;
+    color:white;
+    padding: 40px 80px;
+    text-align: center;
+}
+
+
+.h-primary{
+    text-align: center;
+    padding:10px;
+    font-family: 'Crete Round', serif;
+
+}
+.h-third{
+    text-align: center;
+    font-family: 'Crete Round', serif;
+}
+P{
+    text-align: center;
+    font-family: 'Crete Round', serif;
+
+}
+    
+   
+  /*  
+    /*  font-family: 'Acme', sans-serif; */
+  /*
+    font-family: 'Indie Flower', cursive; 
+    */
+
+
+
+
+
+
+
+
+
+

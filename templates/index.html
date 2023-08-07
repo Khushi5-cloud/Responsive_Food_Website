@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Bree+Serif&family=Crete+Round&family=Indie+Flower&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 950px)" href="{% static phone.css %}">
+    <!-- Width is kept 950 becoz the website start spoiling from width 950-->
+</head>
+
+<body>
+    <nav id="header">
+        <div id="webname">
+            <h3><img id="logo" src="{% static 'logo.png' %}" height="40" width="40"><b style="color:red; "> F</b><b>oodie</b></h3>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#product">Menu</a></li>
+            <li><a href="{%url 'recipe' %}">Recipes</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="order"><a href="{%url 'order' %}"><i class="fa fa-shopping-cart"
+                        style="font-size: 28px; color: blue"></i></a></li>
+        </ul>
+    </nav>
+
+    
+
+
+    <section id="home">
+
+        <h1 class="h-primary">Pick your Food !!!</h1>
+        <h3 class="h-third">Craving for your next meal ?</h3>
+        <h3 class="h-third">Order now on foodie for tasty and delicious meal.</h3>
+        <!-- This technique does not work to land on order page 
+
+        <button class="btn"><a href="order.html"></a>Order Now</button>
+
+        ---->
+        <a href="{%url 'order' %}"><button class="btn">Order Now</button></a>
+    </section>
+
+    <section id="services">
+        <h1 class="h-primary"><b style="color:red;">O</b>ur <b style="color:rgb(247, 229, 71);">S</b>ervices</h1>
+        <!--- Try to take images of same size -->
+        <div id="services-box">
+            <div class="box">
+                <img src="{% static 'food-catering.png' %}">
+                <h3 class="h-third">Food Catering</h3>
+                <p>Offer food, drinks, and other services to various customers, typically for special occasions, make up
+                    the catering sector.</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'online-order.png' %}">
+                <h3 class="h-third">Order Online</h3>
+                <p>Customers can easily order their tasty meal from anywhere and at any time by using their mobile,
+                    tablet, laptop or computers.</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'delivery-man.png' %}">
+                <h3 class="h-third">Food Delivery</h3>
+                <p>Foodie provide fast delivery of food. we delivery our food within one hours and very less. We are
+                    customers most trusted company.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="product">
+        <h1 class="h-primary"><b style="color:red;">O</b>ur <b style="color:rgb(247, 229, 71);">M</b>enu</h1>
+        <!--- Try to take images of same size -->
+        <div id="product-box">
+            <div class="box">
+                <img src="{% static 'pizza.jpeg' %}">
+                <h3 class="h-third"> Pizza</h3>
+                <p>Rs. 230</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'burger.jpeg' %}">
+                <h3 class="h-third">Burger</h3>
+                <p>Rs. 120</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'hotdog.jpeg' %}">
+                <h3 class="h-third">Hotdog</h3>
+                <p>Rs. 80</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'muffins.jpeg' %}">
+                <h3 class="h-third">Muffins</h3>
+                <p>Rs. 50</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients">
+        <h1 class="h-primary"><b style="color:red;">O</b>ur <b style="color:rgb(247, 229, 71);">C</b>lients</h1>
+        <div id="items">
+            <div class="client-items">
+                <img src="{% static 'apple.png' %}">
+            </div>
+            <div class="client-items">
+                <img src="{% static 'ibm.png' %}">
+            </div>
+            <div class="client-items">
+                <img src="{% static 'microsoft.png' %}">
+            </div>
+            <div class="client-items">
+                <img src="{% static 'oracle.png' %}">
+            </div>
+            <div class="client-items">
+                <img src="{% static 'samsung.png' %}">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary"><b style="color:red;">C</b>ontact <b style="color:rgb(247, 229, 71);">U</b>s</h1>
+        <div id="contact-box">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="box">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="box">
+                    <label for="name">Phone: </label>
+                    <input type="phone" name="phone" id="phone" placeholder="Enter your phone" required>
+                </div>
+                <div class="box">
+                    <label for="name">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="box">
+                    <label for="name">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            Copyright &copy; www.foodie.com. All rights reserved.
+
+        </div>
+    </footer>
+</body>
+
+</html>

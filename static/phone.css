@@ -1,0 +1,88 @@
+/*
+This css will only work when the website is open in phone
+ or any device othere than laptop in which the size of screen varies
+*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navigation bar */
+
+#header{
+    flex-direction: column;
+    align-items: center;
+    /* Below Two lines will show header will scrolling*/
+    position: sticky;
+    top: 0px;
+}
+#webname img{
+
+    margin-top: 0px;
+    margin-left:0cm;
+    
+
+}
+#header ul li {
+    font-size: 2rem;
+    padding: 2px 5px;
+    margin-left: 1px;
+    text-align: center;
+}
+
+
+/* Home */
+/* Services */
+#services-box{
+    flex-direction: column;
+}
+#services-box .box{
+    border: 2px solid brown;
+    border-radius: 15px;
+    display:block;
+    margin: 5px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(238, 236, 236, 0.925);
+   
+    
+}
+
+/* Menu */
+
+
+
+ #product-box{
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+#product-box .box
+{
+  
+    border:1px solid brown; 
+    margin: 30px;
+    display: block;
+    border-radius: 10px;
+    height: 7.5cm;
+    width:7cm;
+}
+
+#product-box .box img{
+   
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    
+}
+
+
+/* Client */
+#clients{
+    overflow: hidden;
+    
+}
+/* Contact */
+/* Footer */
+
